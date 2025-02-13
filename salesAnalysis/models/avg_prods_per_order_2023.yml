@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: avg_products_per_order_2023
+    description: "Average number of products per order for each month in 2023"
+    columns:
+      - name: month
+        description: "Month number (1-12)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1,2,3,4,5,6,7,8,9,10,11,12]
+              
+      - name: avg_products_per_order
+        description: "Average number of unique products per order"
+        tests:
+          - not_null
+          - positive_value 

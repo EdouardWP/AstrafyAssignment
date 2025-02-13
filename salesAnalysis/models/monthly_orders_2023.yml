@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: orders_per_month_2023
+    description: "Count of orders per month in 2023"
+    columns:
+      - name: month
+        description: "Month number (1-12)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1,2,3,4,5,6,7,8,9,10,11,12]
+              
+      - name: orders_count
+        description: "Number of unique orders in this month"
+        tests:
+          - not_null
+          - positive_value 

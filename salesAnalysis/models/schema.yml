@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: salesanalysis
+    database: salesanalysis-450811
+    schema: salesAnalysis
+    tables:
+      - name: orders
+      - name: sales 

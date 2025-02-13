@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: orders_2023_count
+    description: "Count of orders in 2023"
+    columns:
+      - name: total_orders_2023
+        description: "Total number of unique orders in 2023"
+        tests:
+          - not_null
+          - positive_value 

@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: orders_2023_with_segments
+    description: "All orders from 2023 with their product quantities and customer segments"
+    columns:
+      - name: orders_id
+        description: "Unique identifier for each order"
+        tests:
+          - not_null
+          - unique
+          
+      - name: date_date
+        description: "Date of the order"
+        tests:
+          - not_null
+          
+      - name: qty_products
+        description: "Number of unique products in the order"
+        tests:
+          - not_null
+          - positive_value
+          
+      - name: segment
+        description: "Customer segment (New, Returning, or VIP)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['New', 'Returning', 'VIP'] 

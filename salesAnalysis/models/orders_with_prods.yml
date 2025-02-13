@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: orders_with_prods
+    description: "All orders from 2022 and 2023 with their product quantities"
+    columns:
+      - name: orders_id
+        description: "Unique identifier for each order"
+        tests:
+          - not_null
+          - unique
+          
+      - name: date_date
+        description: "Date of the order"
+        tests:
+          - not_null
+          
+      - name: qty_product
+        description: "Number of unique products in the order"
+        tests:
+          - not_null
+          - positive_value 

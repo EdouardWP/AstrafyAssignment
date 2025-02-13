@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: order_segments_2023
+    description: "Segmentation of 2023 orders based on customer order history"
+    columns:
+      - name: orders_id
+        description: "Unique identifier for each order"
+        tests:
+          - not_null
+          - unique
+          
+      - name: date_date
+        description: "Date of the order"
+        tests:
+          - not_null
+          
+      - name: segment
+        description: "Customer segment (New, Returning, or VIP)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['New', 'Returning', 'VIP'] 
