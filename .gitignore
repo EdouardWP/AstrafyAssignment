@@ -1,0 +1,17 @@
+# dbt specific
+target/
+dbt_packages/
+logs/
+
+# Python/IDE specific (just in case)
+.venv/
+.env
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+.vscode/
+
+# Local dbt configuration
+profiles.yml
+~/.dbt/profiles.yml 
