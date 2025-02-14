@@ -1,2 +1,5 @@
+~/.dbt/profiles.yml
+profiles.yml
+target/
 dbt_packages/
 logs/

@@ -1,11 +1,10 @@
 name: 'salesanalysis'
 version: '1.0.0'
 
-# This setting configures which "profile" dbt uses for this project.
 profile: 'salesAnalysis'
 model-paths: ["models"]
 
-clean-targets:         # directories to be removed by `dbt clean`
+clean-targets:         
   - "target"
   - "dbt_packages"
 
