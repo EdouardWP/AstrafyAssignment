@@ -1,0 +1,10 @@
+salesAnalysis:  # This should match the profile name in your dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: salesanalysis-450811  # From your schema.yml
+      dataset: salesAnalysis
+      threads: 4
+      timeout_seconds: 300 

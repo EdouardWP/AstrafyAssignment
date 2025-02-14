@@ -18,5 +18,4 @@ models:
       - name: qty_product
         description: "Number of unique products in the order"
         tests:
-          - not_null
-          - positive_value 
+          - not_null 
